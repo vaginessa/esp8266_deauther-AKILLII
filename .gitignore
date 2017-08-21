@@ -22,6 +22,7 @@
 
 # Executables
 *.exe
+!/web_server/byteconverter.exe
 *.out
 *.app
 *.i*86
