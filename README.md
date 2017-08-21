@@ -1,3 +1,7 @@
+# 本版本是原仓库的汉化版！原README.md在下方
+
+<hr />
+
 # ESP8266 Deauther
 Deauthentication attack and other exploits using an ESP8266!
 
