@@ -516,8 +516,6 @@ void setup() {
   server.on("/stations.html", loadStationsHTML);
   server.on("/attack.html", loadAttackHTML);
   server.on("/settings.html", loadSettingsHTML);
-  server.on("/info.html", loadInfoHTML);
-  server.on("/license", loadLicense);
 
   /* JS */
   server.on("/js/apscan.js", loadAPScanJS);
