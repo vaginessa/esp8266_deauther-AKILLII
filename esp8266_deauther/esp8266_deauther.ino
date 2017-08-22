@@ -167,12 +167,6 @@ void loadSettingsHTML() {
 void load404() {
   sendFile(200, "text/html", data_errorHTML, sizeof(data_errorHTML));
 }
-void loadInfoHTML(){
-  sendFile(200, "text/html", data_infoHTML, sizeof(data_infoHTML));
-}
-void loadLicense(){
-  sendFile(200, "text/plain", data_license, sizeof(data_license));
-}
 
 void loadFunctionsJS() {
   sendFile(200, "text/javascript", data_js_functionsJS, sizeof(data_js_functionsJS));

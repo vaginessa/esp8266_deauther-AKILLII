@@ -25,8 +25,13 @@ function getEncryption(num) {
   else if (num == 7) return "none";
   else if (num == 5) return "WEP";
   */
-	if (num == 7) return " ";
-	else return "&#128274;";
+	/*if (num == 7) return " ";
+	else return "&#128274;";*/
+  if (num == 8) return "WPA* &#128274;";
+  else if (num == 4) return "WPA2 &#128274;";
+  else if (num == 2) return "WPA &#128274;";
+  else if (num == 7) return " ";
+  else if (num == 5) return "WEP &#128274;";
 }
 
 function getResults() {
@@ -42,7 +47,7 @@ function getResults() {
 		
     var tr = '';
     if (res.aps.length > 0) {
-		tr += '<tr><th>Ch</th><th>SSID</th><th> </th><th>RSSI</th><th>Select</th></tr>';
+		tr += '<tr><th>信道</th><th>SSID</th><th> </th><th>RSSI</th><th>选择</th></tr>';
 	}	
 	
     for (var i = 0; i < res.aps.length; i++) {
@@ -61,10 +66,10 @@ function getResults() {
 	  tr += '<td><div class="meter_background"> <div class="meter_forground '+_color+'" style="width: '+_width+'%;"><div class="meter_value">' + res.aps[i].r + '</div></div> </div></td>';
 
       if (res.aps[i].se) {
-        tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">deselect</button></td>';
+        tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">取消选择</button></td>';
         apMAC.innerHTML = res.aps[i].m;
       }
-      else tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">select</button></td>';
+      else tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">选择</button></td>';
       tr += '</tr>';
     }
     table.innerHTML = tr;
@@ -75,7 +80,7 @@ function scan() {
   toggleScan(false);
   getResponse("APScan.json", function(responseText) {
     if (responseText == "true") getResults();
-    else showMessage("response error APScan.json");
+    else showMessage("APScan.json响应出错");
 	toggleScan(true);
   });
 }
@@ -83,7 +88,7 @@ function scan() {
 function select(num) {
   getResponse("APSelect.json?num=" + num, function(responseText) {
     if (responseText == "true") getResults();
-    else showMessage("response error APSelect.json");
+    else showMessage("APSelect.json响应出错");
   });
 }
 

@@ -3,20 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8, minimal-ui">
-		<meta name="description" content="Wi-Fi Deauthenticator">
-		<meta name="author" content="Spacehuhn - Stefan Kremser">
-		<meta name="theme-color" content="#36393E" />
-		<title>ESP8266 Deauther</title>
+		
+		<meta name="author" content="XAS-712">
+		
+		<title>ESP8266 WiFi搞事工具	</title>
 		<link rel="stylesheet" href="style.css">
 		<script src="js/functions.js"></script>
 	</head>
 	<body>
 		<nav>
-			<a href="apscan.html">APs</a>
-			<a href="stations.html">Stations</a>
-			<a href="attack.html">Attacks</a>
-			<a href="settings.html">Settings</a>
-			<a class="right" href="info.html">Info</a>
+		<div onclick="alert('由GitHub.XAS-712汉化制作')">ESP8266无线搞事工具</div>
+			<a href="apscan.html">无线接入点</a>
+			<a href="stations.html">无线客户端</a>
+			<a href="attack.html">搞事</a>
+			<a href="settings.html">设置</a>
 		</nav>
 		
 		<div class="container">
@@ -25,39 +25,39 @@
 					
 					<div id="error" class="hide"></div>
 				
-					<h1 class="header">Scan for Wi-Fi Stations</h1>
+					<h1 class="header">扫描无线客户端</h1>
 			
-					<label>Scan time:
+					<label>扫描时间:
 						<input type="number" id="scanTime" value="10">s
 					</label>
 					
-					<button onclick="scan()" id="startScan" class="right button-primary">start</button>
+					<button onclick="scan()" id="startScan" class="right button-primary">扫描</button>
 					
-					<a id="clientScanStatus"><br />scanning...</a>
+					<a id="clientScanStatus"><br />扫描中..</a>
 					
-					<p class="red">The access point will be unavailable while scanning and you may have to reconnect!</p>
+					<p class="red">本接入点可能在扫描时会不可用，你可能需要重新连接。</p>
 					
 					<p>
-						Stations found: <span id="clientsFound">0</span><br />
+						找到客户端: <span id="clientsFound">0</span>个<br />
 						<br />
-						<button class="marginNull button-primary left" onclick="select(-2)">deselect all</button>
-						<button class="marginNull button-primary right" onclick="select(-1)">select all</button><br />
+						<button class="marginNull button-primary left" onclick="select(-2)">全不选</button>
+						<button class="marginNull button-primary right" onclick="select(-1)">全选</button><br />
 					</p>
 					
 					<table></table>
 					
 					<p class="block bold" >
-						Saved stations: <span id="clientNames"></span>
+						保存的客户端: <span id="clientNames"></span>
 					</p>
 					
 					<table id="nameList"></table>
 					
-					<button class="red left" onclick="clearNameList()">clear</button>
+					<button class="red left" onclick="clearNameList()">清空列表</button>
 					
 					<p>
 						<br class="clear" />
 						<br />
-						Add station:
+						添加客户端:
 					</p>
 					
 				</div>
@@ -68,10 +68,10 @@
 					<label>MAC <input type="text" placeholder="AA:BB:CC:DD:EE:FF" id="cMac" /></label>
 				</div>
 				<div class="col-4">
-					<label>Name <input type="text" placeholder="EXAMPLE" id="cName" /></label>
+					<label>名称 <input type="text" placeholder="EXAMPLE" id="cName" /></label>
 				</div>
 				<div class="col-4">
-					<button class="button-primary" style="width: 100%" onclick="addClient()">add</button>
+					<button class="button-primary" style="width: 100%" onclick="addClient()">添加</button>
 				</div>
 			</div>
 			
@@ -79,8 +79,8 @@
 				<div class="col-12">
 					<div id="copyright">
 						Version 1.6<br />
-						Copyright (c) 2017 Stefan Kremser<br />
-						<a href="https://github.com/spacehuhn" target="_blank">github.com/spacehuhn</a>
+						
+						
 					</div>
 				</div>
 			</div>

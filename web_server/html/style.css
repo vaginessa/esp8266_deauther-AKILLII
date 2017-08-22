@@ -159,23 +159,31 @@ th, td {
 
 
 /* Navigation bar */
-nav {
-	display: block;
-	padding: 8px 10px;
-	background: #2f3136;
+nav, 
+nav a{
+	background: #222;
+	text-align: center;
 }
-
-nav a {
-	color: #bfbfbf;
-	padding: 0.5em;
+nav a{
+	color: #7ac1ff;
+	text-align: center;
+	padding: .3em;
 	display: inline-block;
 	text-decoration: none;
 }
-
 nav a:hover{
-	background: #36393f;
-	color:#cecece;
-	border-radius: 4px;
+	text-align: center;
+	background: #000;
+	color:#f0f0f0;
+}
+nav div{
+	background: #222;
+	text-align: center;
+}
+nav div{
+	text-align: center;
+	color: #0cc;
+	padding: .5em;
 }
 
 /* Inputs and buttons */

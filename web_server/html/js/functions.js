@@ -31,7 +31,7 @@ function showMessage(msg, closeAfter){
 function getResponse(adr, callback, timeoutCallback, timeout, method){
 	if(timeoutCallback === undefined) {
 		timeoutCallback = function(){
-			showMessage("error loading "+adr);
+			showMessage(adr+"加载错误");
 		};
 	}
 	if(timeout === undefined) timeout = 8000; 

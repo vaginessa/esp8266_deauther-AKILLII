@@ -93,10 +93,10 @@ void Settings::load() {
 void Settings::reset() {
   if (debug) Serial.print("reset settings...");
 
-  ssid = "pwned";
-  password = "deauther"; //must have at least 8 characters
+  ssid = "MZY7 WIFI MT1";
+  password = "mzy7tech"; //must have at least 8 characters
   ssidHidden = false;
-  apChannel = 1;
+  apChannel = 9;
 
   ssidLen = ssid.length();
   passwordLen = password.length();
