@@ -1,4 +1,12 @@
-# 本版本是原仓库的汉化版！原README.md在下方
+
+#Forked from XAS-712.按照原版GIT仓库的步骤做就可以.注意芯片存储大小及频率数.
+
+#Frequency 为 160Mhz 对应的Flash Size为 4M (3M SPIFFS)
+
+#Edit by AKILLII
+
+<hr />
+#本版本是原仓库的汉化版！原README.md在下方
 
 <hr />
 
